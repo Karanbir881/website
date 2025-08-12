@@ -61,6 +61,8 @@
             gap: 40px;
             justify-content: center;
             padding-bottom: 40px;
+            width: 100%;
+            align-items: center;
         }
 
         .paper-card {
@@ -128,6 +130,29 @@
             color: #0f0f0f;
         }
 
+        iframe {
+            width: 90%;
+            height: 600px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .back-btn {
+            margin: 20px 0;
+            padding: 8px 15px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .back-btn:hover {
+            background: #1e7e34;
+        }
+
         /* Responsive Design for Phones */
         @media (max-width: 768px) {
             nav ul {
@@ -143,8 +168,13 @@
 
             .paper-card, 
             #author {
-                width: 85%;        /* Narrower for compact look */
-                padding: 15px;     /* Less padding */
+                width: 85%;
+                padding: 15px;
+            }
+
+            iframe {
+                height: 400px;
+                width: 95%;
             }
 
             .paper-card img {
@@ -182,7 +212,7 @@
 
     <h1>Research Papers</h1>
 
-    <div class="container">
+    <div class="container" id="paper-container">
         <div class="paper-card">
             <img src="euthanasia.png" alt="Right to die peacefully: The objectives of euthanasia">
             <h2>Paper 1: Right to die peacefully: The objectives of euthanasia</h2>
@@ -198,10 +228,12 @@
 
     <script>
         function openPaper(pdfPath) {
-            window.open(pdfPath, '_blank');
+            document.getElementById('paper-container').innerHTML = `
+                <button class="back-btn" onclick="location.reload()">← Back to Papers</button>
+                <iframe src="${pdfPath}#toolbar=0&navpanes=0&scrollbar=0" title="Research Paper"></iframe>
+            `;
         }
     </script>
 </body>
 </html>
-
 
