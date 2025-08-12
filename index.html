@@ -12,12 +12,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-             background: url('nature.jpg') no-repeat center center/cover;
-            background-attachment: fixed; /* Keeps background stable */
+            background: url('nature.jpg') no-repeat center center/cover;
+            background-attachment: fixed;
             color: #0a0a0a;
         }
 
-        /* Navigation Bar */
         nav {
             backdrop-filter: blur(50px);
             width: 100%;
@@ -37,10 +36,6 @@
             gap: 40px;
         }
 
-        nav ul li {
-            display: inline;
-        }
-
         nav ul li a {
             text-decoration: none;
             color: rgb(3, 3, 3);
@@ -57,6 +52,7 @@
             color: rgb(8, 8, 8);
             margin: 30px 0 20px;
             text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+            text-align: center;
         }
 
         .container {
@@ -77,6 +73,7 @@
             border-radius: 15px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
             width: 500px;
+            max-width: 90%;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             cursor: pointer;
             color: #222;
@@ -120,25 +117,47 @@
             box-shadow: 0 8px 16px rgba(0,0,0,0.3);
         }
 
-        /* About Author Section */
         #author {
-            
             backdrop-filter: blur(20px);
             padding: 30px;
             border-radius: 15px;
             width: 500px;
+            max-width: 90%;
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
             margin-bottom: 40px;
             color: #0f0f0f;
         }
+
+        /* Responsive Design for Phones */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                padding: 10px;
+            }
+
+            nav ul li a {
+                font-size: 14px;
+            }
+
+            .paper-card, #author {
+                width: 95%;
+                padding: 20px;
+            }
+
+            .paper-card img {
+                height: auto;
+            }
+
+            h1 {
+                font-size: 22px;
+                margin: 20px 0;
+            }
+        }
     </style>
 </head>
 <body>
-
-    <!-- Moving Background -->
-    <div class="video-background"></div>
-
-    <!-- Navigation Bar -->
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
@@ -157,7 +176,6 @@
         </div>
     </div>
 
-    <!-- About the Author Section -->
     <section id="author">
         <h2>About the Author</h2>
         <p>khdhbelkhkfbweklfh aslkkfhbwekfbewfkjbewfk;j f.mn ckwlehbf;aksffb;wqeopfibwef vaslfhkbW;KEFN DS.KVHJBWke f.qKJFWJBIA;WEJ FMRE GLWB.</p>
