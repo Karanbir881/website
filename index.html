@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Papers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+             background: url('nature.jpg') no-repeat center center/cover;
+            background-attachment: fixed; /* Keeps background stable */
+            color: #0a0a0a;
+        }
+
+        /* Navigation Bar */
+        nav {
+            backdrop-filter: blur(50px);
+            width: 100%;
+            padding: 15px 0;
+            box-shadow: 0 2px 8px rgba(4, 4, 4, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+            padding: 0 30px;
+            gap: 40px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(3, 3, 3);
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #9aff57;
+        }
+
+        h1 {
+            color: rgb(8, 8, 8);
+            margin: 30px 0 20px;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            justify-content: center;
+            padding-bottom: 40px;
+        }
+
+        .paper-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 25px;
+            backdrop-filter: blur(20px);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            width: 500px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+            color: #222;
+        }
+
+        .paper-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .paper-card h2 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+            color: #0c0c0c;
+        }
+
+        .paper-card p {
+            font-size: 14px;
+            color: #070707;
+        }
+
+        .paper-card button {
+            padding: 8px 12px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .paper-card button:hover {
+            background: #0056b3;
+        }
+
+        .paper-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+
+        /* About Author Section */
+        #author {
+            
+            backdrop-filter: blur(20px);
+            padding: 30px;
+            border-radius: 15px;
+            width: 500px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            margin-bottom: 40px;
+            color: #0f0f0f;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Moving Background -->
+    <div class="video-background"></div>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#author">About the Author</a></li>
+        </ul>
+    </nav>
+
+    <h1>Research Papers</h1>
+
+    <div class="container">
+        <div class="paper-card">
+            <img src="euthanasia.png" alt="Right to die peacefully: The objectives of euthanasia">
+            <h2>Paper 1: Right to die peacefully: The objectives of euthanasia</h2>
+            <p>This paper delves into the definition and types of euthanasia, examines its ethical dimensions, and analyzes the diverse legal frameworks surrounding it.</p>
+            <button onclick="openPaper('pdfs/paper1.pdf')">Read Paper</button>
+        </div>
+    </div>
+
+    <!-- About the Author Section -->
+    <section id="author">
+        <h2>About the Author</h2>
+        <p>khdhbelkhkfbweklfh aslkkfhbwekfbewfkjbewfk;j f.mn ckwlehbf;aksffb;wqeopfibwef vaslfhkbW;KEFN DS.KVHJBWke f.qKJFWJBIA;WEJ FMRE GLWB.</p>
+    </section>
+
+    <script>
+        function openPaper(pdfPath) {
+            window.open(pdfPath, '_blank');
+        }
+    </script>
+</body>
+</html>
