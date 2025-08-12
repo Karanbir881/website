@@ -67,7 +67,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 25px;
+            gap: 20px;
             backdrop-filter: blur(20px);
             padding: 40px;
             border-radius: 15px;
@@ -133,26 +133,41 @@
             nav ul {
                 flex-direction: column;
                 align-items: center;
-                gap: 15px;
-                padding: 10px;
+                gap: 12px;
+                padding: 8px;
             }
 
             nav ul li a {
                 font-size: 14px;
             }
 
-            .paper-card, #author {
-                width: 95%;
-                padding: 20px;
+            .paper-card, 
+            #author {
+                width: 85%;        /* Narrower for compact look */
+                padding: 15px;     /* Less padding */
             }
 
             .paper-card img {
                 height: auto;
+                border-radius: 6px;
+            }
+
+            .paper-card h2 {
+                font-size: 16px;
+            }
+
+            .paper-card p {
+                font-size: 13px;
+            }
+
+            .paper-card button {
+                font-size: 13px;
+                padding: 6px 10px;
             }
 
             h1 {
-                font-size: 22px;
-                margin: 20px 0;
+                font-size: 20px;
+                margin: 15px 0;
             }
         }
     </style>
@@ -188,3 +203,4 @@
     </script>
 </body>
 </html>
+
